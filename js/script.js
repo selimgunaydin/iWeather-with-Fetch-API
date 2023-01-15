@@ -7,7 +7,7 @@ const searchButton = document.getElementById("searchButton");
 const d = new Date();
 const clockDOM = (document.getElementById(
   "clock"
-).innerHTML = `${d.getDate()}.${d.getMonth()}.${d.getFullYear()}`);
+  ).innerHTML = `${d.getDate()}.${d.getMonth()+1}.${d.getFullYear()} ${d.getUTCHours()}:${d.getMinutes()}`);
 
 const setQuery = (e, event) => {
   if (e.keyCode == "13" || e.target.id == "searchButton")
